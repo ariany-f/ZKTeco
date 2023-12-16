@@ -218,8 +218,8 @@
                     <li><a href="{{ route('site.notices') }}" title="Página do Blog">Blog</a></li>
                     @foreach($categories as $category)
                         @if(count($category->subcategories))
-                            <li class="nav-item dropdown">
-                                <a class="nav-link backdrop dropdown-toggle" data-toggle="dropdown" href="#" title="Categoria">{{ $category->name }}</a>
+                            <li class="nav-item backdrop dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" title="Categoria">{{ $category->name }}</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @foreach($category->subcategories as $subcategory)
                                         <a href="{{ route('site.products.category.subcategory', ['category' => $category->slug, 'subcategory' => $subcategory->slug]) }}" class="dropdown-item" href="#">{{ $subcategory->name }}</a>
