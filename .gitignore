@@ -1,5 +1,5 @@
 #/storage/app/public/*
-/config/
+/config/*
 /storage/framework/cache/*
 /storage/logs/*
 /storage/.cache/
