@@ -41,7 +41,7 @@
 
     <meta name="robots" content="index, follow>" />
     <meta name="googlebot" content="index, follow" />
-    <meta name="theme-color" content="#78bc27">
+    <meta name="theme-color" content="#163f83">
 
     <link rel="canonical" href="@yield('url', config('app.url'))" />
     <meta name="geo.placename" content="Brasil" />
@@ -150,7 +150,7 @@
                 <!-- row -->
                 <div class="row">
                     <!-- LOGO -->
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <div class="header-logo">
                             <a href="{{ url() }}" class="logo" title="{{ config('app.name') }}">
                                 <img src="{{ public_path('assets/img/logo.png') }}" alt="{{ config('app.name') }}" title="{{ config('app.name') }}">
@@ -183,7 +183,7 @@
                     <!-- /SEARCH BAR -->
 
                     <!-- ACCOUNT -->
-                    <div class="col-md-3 clearfix">
+                    <div class="col-md-1 clearfix">
                         <div class="header-ctn">
                             <!-- Menu Toogle -->
                             <div class="menu-toggle">
@@ -213,9 +213,9 @@
             <div id="responsive-nav">
                 <!-- NAV -->
                 <ul class="collapse navbar-collapse main-nav nav navbar-nav">
-                    <li class="active"><a href="{{ route('site') }}" title="Página Inicial">Início</a></li>
-                    <li><a href="{{ route('site.products') }}" title="Página de Produtos">Produtos</a></li>
-                    <li><a href="{{ route('site.notices') }}" title="Página do Blog">Blog</a></li>
+                    <!-- <li class="active"><a href="{{ route('site') }}" title="Página Inicial">Início</a></li> -->
+                    <!-- <li><a href="{{ route('site.products') }}" title="Página de Produtos">Produtos</a></li>
+                    <li><a href="{{ route('site.notices') }}" title="Página do Blog">Blog</a></li> -->
                     @foreach($categories as $category)
                         @if(count($category->subcategories))
                             <li class="nav-item backdrop dropdown">
