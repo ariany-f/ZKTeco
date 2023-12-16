@@ -879,7 +879,7 @@ textarea.input {
   position: relative;
 }
 
-.product .product-img>img {
+.product .product-img img {
   width: 100%;
   height: 250px;
   object-fit: cover;
