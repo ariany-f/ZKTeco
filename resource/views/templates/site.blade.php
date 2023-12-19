@@ -202,6 +202,8 @@
             <!-- container -->
         </div>
         <!-- /MAIN HEADER -->
+
+        
     </header>
     <!-- /HEADER -->
 
@@ -221,9 +223,11 @@
                             <li class="nav-item backdrop dropdown">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" title="Categoria">{{ $category->name }}</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    @foreach($category->subcategories as $subcategory)
-                                        <a href="{{ route('site.products.category.subcategory', ['category' => $category->slug, 'subcategory' => $subcategory->slug]) }}" class="dropdown-item" href="#">{{ $subcategory->name }}</a>
-                                    @endforeach
+                                    <div class="dropdown-container">
+                                        @foreach($category->subcategories as $subcategory)
+                                            <a href="{{ route('site.products.category.subcategory', ['category' => $category->slug, 'subcategory' => $subcategory->slug]) }}" class="dropdown-item" href="#">{{ $subcategory->name }}</a>
+                                        @endforeach
+                                    </div>
                                 </div>
                             </li>
                         @endif
@@ -285,125 +289,85 @@
         <!-- /row -->
     </div>
     <!-- /SECTION -->
-
-    <!-- FOOTER -->
-    <footer id="footer">
-        <!-- top footer -->
-        <div class="section">
-            <!-- container -->
-            <div class="container">
-                <!-- row -->
-                <div class="row">
-                    <div class="col-md-3 col-xs-6">
-                        <div class="footer">
-                            <h3 class="footer-title">Contato</h3>
-                            <ul class="footer-links">
-                                <li><i class="fa fa-map-marker"></i> {{ mask(config('app.address.postal_code'), '#####-###') }} - {{ config('app.address.street') }}, {{ config('app.address.number') }}, {{ config('app.address.district') }}, {{ config('app.address.city') }} - {{ config('app.address.state') }}</li>
-                                
-                                @if(!empty($phone))
-                                <li><a href="tel:{{ $phone }}" title="Entrar em Contato por Telefone"><i class="fa fa-phone"></i> {{ mask($phone, '(##)####-####') }}</a></li>
-                                @endif
-                                
-                                @if(!empty($cell))
-                                <li><a href="tel:{{ $cell }}" title="Entrar em Contato por Celular"><i class="fa fa-phone"></i> {{ mask($cell, '(##)#####-####') }}</a></li>
-                                @endif
-                                
-                                @if(!empty($whatsapp))
-                                <li><a href="https://wa.me/55{{ $whatsapp }}?text={{ urlencode('Olá, gostária de tirar algumas dúvida!') }}" title="Entrar em Contato por Whatsapp" target="_blank"><i class="fa fa-whatsapp"></i> {{ mask($whatsapp, '(##)#####-####') }}</a></li>
-                                @endif
-
-                                @if(!empty($email))
-                                <li><a href="mailto:{{ $email }}" title="Entrar em Contato por E-Mail"><i class="fa fa-envelope-o"></i> {{ $email }}</a></li>
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-xs-6">
-                        <div class="footer">
-                            <h3 class="footer-title">Redes Sociais</h3>
-                            <ul class="footer-links">
-                                @if(!empty($facebook))
-                                <li><a href="{{ $facebook }}" title="Nosso Facebook" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                @endif
-                                
-                                @if(!empty($instagram))
-                                <li><a href="{{ $instagram }}" title="Nosso Instagram" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
-                                @endif
-                               
-                                @if(!empty($twitter))
-                                <li><a href="{{ $twitter }}" title="Nosso Twitter" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                @endif
-                                
-                                @if(!empty($linkedin))
-                                <li><a href="{{ $linkedin }}" title="Nosso Linkedin" target="_blank"><i class="fa fa-linkedin"></i> Linkedin</a></li>
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="clearfix visible-xs"></div>
-
-                    <div class="col-md-3 col-xs-6">
-                        <div class="footer">
-                            <h3 class="footer-title">Informações</h3>
-                            <ul class="footer-links">
-                                <li><a href="{{ route('site') }}" title="Página Inicial">Início</a></li>
-                                <li><a href="{{ route('site.products') }}" title="Página de Produtos">Produtos</a></li>
-                                <li><a href="{{ route('site.notices') }}" title="Página do Blog">Blog</a></li>
-                                <li><a href="{{ route('site.privacy_policy') }}" title="Nossa Política de Privacidade" target="_blank">Política de Privacidade</a></li>
-                                <li><a href="{{ route('site.terms_conditions') }}" title="Nosso Termos e Condições" target="_blank">Termos & Condições</a></li>
-                                <li><a href="{{ route('site.return_policy') }}" title="Nossa Política de Devolução" target="_blank">Política de Devolução</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-xs-6">
-                        <div class="footer">
-                            <h3 class="footer-title">Serviços</h3>
-                            <ul class="footer-links">
-                                <!-- <li><a href="{{ route('site.cart') }}" title="Carrinho de Compras">Carrinho</a></li> -->
-                                @if(!auth('site'))
-                                <li><a href="{{ route('site.login') }}" title="Fazer Login em Minha Conta">Login</a></li>
-                                <li><a href="{{ route('site.account.pf.create') }}" title="Criar Minha Conta">Criar Conta</a></li>
-                                @else
-                                <li><a href="{{ route('site.myaccount') }}" title="Minha Conta">Minha Conta</a></li>
-                                <li><a href="{{ route('site.myaccount.favorites') }}" title="Seus Produtos Favoritos">Favoritos</a></li>
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
+    
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <div class="logo">
+                    <a href="https://www.techscan.com.br"><img src="{{ public_path('assets/img/logo_white.png') }}"></a>
                 </div>
+                <!-- <p class="by"><a href="http://www.thunderbold.com.br" target="blank">Desenvolvido por Thunderbold</a></p> -->
+            </div>
+            <div class="col-lg-2 col-lg-push-1 col-md-2 col-md-push-1 col-sm-3 col-xs-12">
+                <div class="footer">
+                    <h3 class="footer-title">Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fa fa-map-marker"></i> {{ mask(config('app.address.postal_code'), '#####-###') }} - {{ config('app.address.street') }}, {{ config('app.address.number') }}, {{ config('app.address.district') }}, {{ config('app.address.city') }} - {{ config('app.address.state') }}</li>
+                        
+                        @if(!empty($phone))
+                        <li><a href="tel:{{ $phone }}" title="Entrar em Contato por Telefone"><i class="fa fa-phone"></i> {{ mask($phone, '(##)####-####') }}</a></li>
+                        @endif
+                        
+                        @if(!empty($cell))
+                        <li><a href="tel:{{ $cell }}" title="Entrar em Contato por Celular"><i class="fa fa-phone"></i> {{ mask($cell, '(##)#####-####') }}</a></li>
+                        @endif
+                        
+                        @if(!empty($whatsapp))
+                        <li><a href="https://wa.me/55{{ $whatsapp }}?text={{ urlencode('Olá, gostária de tirar algumas dúvida!') }}" title="Entrar em Contato por Whatsapp" target="_blank"><i class="fa fa-whatsapp"></i> {{ mask($whatsapp, '(##)#####-####') }}</a></li>
+                        @endif
+
+                        @if(!empty($email))
+                        <li><a href="mailto:{{ $email }}" title="Entrar em Contato por E-Mail"><i class="fa fa-envelope-o"></i> {{ $email }}</a></li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-lg-push-2 col-md-3 col-md-push-2 col-sm-4 col-xs-12">
+                <div class="footer">
+                    <h3 class="footer-title">Informações</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{ route('site') }}" title="Página Inicial">Início</a></li>
+                        <li><a href="{{ route('site.products') }}" title="Página de Produtos">Produtos</a></li>
+                        <li><a href="{{ route('site.notices') }}" title="Página do Blog">Blog</a></li>
+                        <li><a href="{{ route('site.privacy_policy') }}" title="Nossa Política de Privacidade" target="_blank">Política de Privacidade</a></li>
+                        <li><a href="{{ route('site.terms_conditions') }}" title="Nosso Termos e Condições" target="_blank">Termos & Condições</a></li>
+                        <li><a href="{{ route('site.return_policy') }}" title="Nossa Política de Devolução" target="_blank">Política de Devolução</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-lg-push-3 col-md-3 col-md-push-3 col-sm-4 col-xs-12">
+                <div class="footer">
+                    <h3 class="footer-title">Serviços</h3>
+                    <ul class="footer-links">
+                        <!-- <li><a href="{{ route('site.cart') }}" title="Carrinho de Compras">Carrinho</a></li> -->
+                        @if(!auth('site'))
+                        <li><a href="{{ route('site.login') }}" title="Fazer Login em Minha Conta">Login</a></li>
+                        <li><a href="{{ route('site.account.pf.create') }}" title="Criar Minha Conta">Criar Conta</a></li>
+                        @else
+                        <li><a href="{{ route('site.myaccount') }}" title="Minha Conta">Minha Conta</a></li>
+                        <li><a href="{{ route('site.myaccount.favorites') }}" title="Seus Produtos Favoritos">Favoritos</a></li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bottom footer -->
+    <div id="bottom-footer" class="section">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <span class="copyright">{{ config('app.name') }} &copy; {{ date('Y') }} Todos os direitos reservados</span>
+                </div>
+            </div>
                 <!-- /row -->
-            </div>
-            <!-- /container -->
         </div>
-        <!-- /top footer -->
-
-        <!-- bottom footer -->
-        <div id="bottom-footer" class="section">
-            <div class="container">
-                <!-- row -->
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <ul class="footer-payments">
-                            <li><span><i class="fa fa-cc-visa"></i></span></li>
-                            <li><span><i class="fa fa-credit-card"></i></span></li>
-                            <li><span><i class="fa fa-cc-paypal"></i></a></li>
-                            <li><span><i class="fa fa-cc-mastercard"></i></span></li>
-                            <li><span><i class="fa fa-cc-discover"></i></span></li>
-                            <li><span><i class="fa fa-cc-amex"></i></span></li>
-                        </ul>
-                        <span class="copyright">{{ config('app.name') }} &copy; {{ date('Y') }} Todos os direitos reservados</span>
-                    </div>
-                </div>
-                    <!-- /row -->
-            </div>
-            <!-- /container -->
-        </div>
-        <!-- /bottom footer -->
-    </footer>
-    <!-- /FOOTER -->
+        <!-- /container -->
+    </div>
+    <!-- /bottom footer -->
+</footer>
 
     @if(config('lgpd.active') && (!isset($_COOKIE['cookieaccept']) || !$_COOKIE['cookieaccept']))
     @include('includes.site.lgpd')
