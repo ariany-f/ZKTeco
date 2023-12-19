@@ -456,6 +456,7 @@ textarea.input {
 .header-links li a {
   color: #FFF;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 .header-links li a:hover {
