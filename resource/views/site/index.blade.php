@@ -72,12 +72,12 @@
 <!-- SECTION -->
 <div class="section">
 	<!-- container -->
-	<div class="container">
+	<!-- <div class="container"> -->
 		<!-- row -->
-		<div class="row">
+		<!-- <div class="row"> -->
 			@foreach($banners as $banner)
 			<!-- shop -->
-			<div class="col-md-{{ $md }} col-xs-6">
+			<!-- <div class="col-md-{{ $md }} col-xs-6">
 				<div class="shop">
 					<div class="shop-img">
 						<img src="{{ url('storage/app/public/' . $banner->image) }}" alt="{{ $banner->title }}" title="{{ $banner->title }}">
@@ -87,12 +87,12 @@
 						<a href="{{ $banner->link }}" class="cta-btn" title="Ver Mais Sobre {{ $banner->title }}">VER MAIS <i class="fa fa-arrow-circle-right"></i></a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- /shop -->
 			@endforeach
-		</div>
+		<!-- </div> -->
 		<!-- /row -->
-	</div>
+	<!-- </div> -->
 	<!-- /container -->
 </div>
 <!-- /SECTION -->

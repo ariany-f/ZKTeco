@@ -98,14 +98,14 @@
 					@endforeach
 				</div>
 
-				<div class="input-container" style="margin-top: 40px;">
+				<!-- <div class="input-container" style="margin-top: 40px;">
 	    			<form action="{{ route('site.products.show.freight', ['slug' => $product->slug]) }}" method="POST" data-container=".result-frete">
 	    				<input type="hidden" name="size_id" value="{{ $product->sizes->first()->id }}">
 			    		<input type="text" name="postal_code" placeholder="CEP para calcular o frete" class="cep-mask">
 			    		<button type="submit">CALCULAR</button>
 			    	</form>
 			    	<div class="result-frete"></div>
-	    		</div>
+	    		</div> -->
 			</div>
 			<!-- /Product main img -->
 
@@ -126,11 +126,11 @@
 				<div class="product-details">
 					<h1 class="product-name">{{ $product->name }}</h1>
 
-					@if($product->freight_free)
+					<!-- @if($product->freight_free)
 					<span>Frete Grátis</span>
-					@endif
+					@endif -->
 
-					<div style="margin-top: 20px;">
+					<!-- <div style="margin-top: 20px;">
 						@if($product->ratings_active)
 							@if($product->ratings->where('visible', true)->count() > 0)
 							<div class="product-rating">
@@ -145,7 +145,8 @@
 							@endif
 							<a class="review-link" href="#tab3" title="Avaliações">{{ $product->ratings->where('visible', true)->count() }} Avaliação(ões) | Adicione sua avaliação</a>
 						@endif
-					</div>
+					</div> -->
+					@if($client)
 					<div>
 						<h2 class="product-price">
 							<span class="product-current-price">R$ {{ $product->priceFormat }}</span>
@@ -168,6 +169,7 @@
 
 						<p><small>Em até {{ $product->installment_no_interest }} vezes sem juros</small></p>
 					</div>
+					@endif
 					
 					@if(mb_strlen($product->description) <= 200)
 					<p style="margin: 20px 0;">{!! str_ireplace("\n", '<br/>', $product->description) !!}</p>
@@ -191,7 +193,7 @@
 						</div>
 					</div>
 					@endif
-					
+<!-- 					
 					<form action="{{ route('site.cart.store', ['product_id' => $product->id, 'size_id' => $product->sizes->first()->id]) }}" method="POST" class="add-to-cart" @if($product->sizes->first()->quantity == 0) style="display: none" @endif>
 						<div class="qty-label">
 							Qtde
@@ -202,21 +204,27 @@
 							</div>
 						</div>
 						<button type="submit" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-					</form>
+					</form> -->
 
-					<ul class="product-btns">
+					<!-- <ul class="product-btns">
 						<li><a href="{{ route('site.myaccount.favorites.add', ['id' => $product->id]) }}" title="Adicionar aos Favoritos" class="add-favorite-btn-ajax" data-url="{{ route('site.myaccount.favorites.add', ['id' => $product->id]) }}"><i class="fa fa-heart-o"></i> Favoritar</a></li>
-					</ul>
+					</ul> -->
+					
+					@if(!$client)
+						<ul class="product-btns">
+							<a class="login-btn" href="{{ route('site.login') }}" title="Fazer Login em Minha Conta">Faça o login para ver o preço</a>
+						</ul>
+					@endif
 
-					<section style="margin-top: 40px;">
+					<!-- <section style="margin-top: 40px;"> -->
 				        <!-- Your share button code -->
-				        <div class="fb-share-button mt-1" data-href="{{ urlencode(route('site.products.show', ['slug' => $product->slug])) }}" data-layout="button" data-size="large" title="Compartilhe no Facebook"></div>
+				        <!-- <div class="fb-share-button mt-1" data-href="{{ urlencode(route('site.products.show', ['slug' => $product->slug])) }}" data-layout="button" data-size="large" title="Compartilhe no Facebook"></div>
 				        <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('site.products.show', ['slug' => $product->slug])) }}&text={{ $product->name }}" class="btn btn-sm bg-twitter mt-0 mb-2 share-btn" target="_blank" title="Compartilhe no Twitter"><i class="fa fa-twitter"></i> Share</a>
-				        <a href="https://api.whatsapp.com/send?text={{ urlencode($product->name . ': ' . route('site.products.show', ['slug' => $product->slug])) }}" target="_blank" class="btn btn-sm bg-whatsapp mt-0 mb-2 share-btn" title="Compartilhe no WhatsApp"><i class="fa fa-whatsapp"></i> Share</a>
+				        <a href="https://api.whatsapp.com/send?text={{ urlencode($product->name . ': ' . route('site.products.show', ['slug' => $product->slug])) }}" target="_blank" class="btn btn-sm bg-whatsapp mt-0 mb-2 share-btn" title="Compartilhe no WhatsApp"><i class="fa fa-whatsapp"></i> Share</a> -->
 
 				        <!-- Load Facebook SDK for JavaScript -->
-				        <div id="fb-root"></div>
-				    </section>
+				        <!-- <div id="fb-root"></div> -->
+				    <!-- </section> -->
 
 				</div>
 			</div>

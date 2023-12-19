@@ -1128,6 +1128,17 @@ textarea.input {
   z-index: 2;
 }
 
+.product-btns>.login-btn {
+  color: #FFF;
+  background-color: #163f83;
+  padding: 10px 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
 .product:hover .add-to-cart {
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);

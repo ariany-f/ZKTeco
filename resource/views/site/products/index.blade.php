@@ -39,7 +39,7 @@
 				<!-- /aside Widget -->
 
 				<!-- aside Widget -->
-				<div class="aside" style="margin-top: 40px;">
+				<!-- <div class="aside" style="margin-top: 40px;">
 					<h3 class="aside-title">Frete</h3>
 					<div class="input-checkbox">
 						@isset($builder['freight_free'])
@@ -49,7 +49,7 @@
 						@endisset
 						<label for="freight_free"><span></span>Frete Grátis</label>
 					</div>
-				</div>
+				</div> -->
 				<!-- /aside Widget -->
 
 				<button type="submit" class="primary-btn cta-btn" style="margin-top: 20px; width: 100%;">Aplicar Filtro</button>
