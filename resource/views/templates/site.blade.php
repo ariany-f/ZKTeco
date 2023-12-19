@@ -329,10 +329,10 @@
                     <ul class="footer-links">
                         <li><a href="{{ route('site') }}" title="Página Inicial">Início</a></li>
                         <li><a href="{{ route('site.products') }}" title="Página de Produtos">Produtos</a></li>
-                        <li><a href="{{ route('site.notices') }}" title="Página do Blog">Blog</a></li>
+                        <!-- <li><a href="{{ route('site.notices') }}" title="Página do Blog">Blog</a></li> -->
                         <li><a href="{{ route('site.privacy_policy') }}" title="Nossa Política de Privacidade" target="_blank">Política de Privacidade</a></li>
                         <li><a href="{{ route('site.terms_conditions') }}" title="Nosso Termos e Condições" target="_blank">Termos & Condições</a></li>
-                        <li><a href="{{ route('site.return_policy') }}" title="Nossa Política de Devolução" target="_blank">Política de Devolução</a></li>
+                        <!-- <li><a href="{{ route('site.return_policy') }}" title="Nossa Política de Devolução" target="_blank">Política de Devolução</a></li> -->
                     </ul>
                 </div>
             </div>
