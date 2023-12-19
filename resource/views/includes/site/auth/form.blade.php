@@ -4,7 +4,7 @@
 	@if($type == 1)
 	<h2>Criar Conta como pessoa física:</h2>
 	@else
-	<h2>Criar Conta como pessoa jurídica:</h2>
+	<h2>Solicitar Cadastro</h2>
 	@endif
 	<hr />
 
@@ -172,11 +172,11 @@
 
 	<br />
 	<input type="checkbox" name="terms_conditions" id="terms_conditions" class="required" required>
-	<label for="terms_conditions">Aceitos os <a href="{{ route('site.terms_conditions') }}" title="Termos e Condições" target="_blank">termos e condições</a></label>
+	<label for="terms_conditions">&nbsp;Aceitos os <a href="{{ route('site.terms_conditions') }}" title="Termos e Condições" target="_blank">termos e condições</a></label>
 
 	<br /><br />
 	<p><a href="{{ route('site.login') }}" title="Fazer login">Já possuo conta</a></p>
 	<br />
 
-	<input type="submit" class="primary-btn cta-btn" value="Criar Conta">
+	<input type="submit" class="primary-btn cta-btn" value="Solicitar Cadastro">
 </form>

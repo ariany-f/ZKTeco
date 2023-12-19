@@ -134,7 +134,7 @@
                 <ul class="header-links pull-right">
                     @if(!auth('site'))
                     <li><a href="{{ route('site.login') }}" title="Fazer Login em Minha Conta"><i class="fa fa-lock"></i> Login</a></li>
-                    <li><a href="{{ route('site.account.pf.create') }}" title="Criar Minha Conta"><i class="fa fa-user"></i> Criar Conta</a></li>
+                    <li><a href="{{ route('site.account.pj.create') }}" title="Criar Minha Conta"><i class="fa fa-user"></i> Criar Conta</a></li>
                     @else
                     <li><a href="{{ route('site.myaccount') }}" title="Minha Conta"><i class="fa fa-user-circle"></i> Minha Conta</a></li>
                     @endif
@@ -369,7 +369,7 @@
                                 <!-- <li><a href="{{ route('site.cart') }}" title="Carrinho de Compras">Carrinho</a></li> -->
                                 @if(!auth('site'))
                                 <li><a href="{{ route('site.login') }}" title="Fazer Login em Minha Conta">Login</a></li>
-                                <li><a href="{{ route('site.account.pf.create') }}" title="Criar Minha Conta">Criar Conta</a></li>
+                                <li><a href="{{ route('site.account.pj.create') }}" title="Criar Minha Conta">Criar Conta</a></li>
                                 @else
                                 <li><a href="{{ route('site.myaccount') }}" title="Minha Conta">Minha Conta</a></li>
                                 <li><a href="{{ route('site.myaccount.favorites') }}" title="Seus Produtos Favoritos">Favoritos</a></li>
