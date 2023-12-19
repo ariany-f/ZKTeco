@@ -176,7 +176,7 @@
                                     @endforeach
                                 </select>
                                 <input type="text" class="input" placeholder="Buscar" name="search" value="{{ $search ?? null }}">
-                                <button class="search-btn">Buscar</button>
+                                <button class="search-btn"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>
