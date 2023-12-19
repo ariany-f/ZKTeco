@@ -157,7 +157,7 @@
 			<!-- section title -->
 			<div class="col-md-12">
 				<div class="section-title">
-					<h2 class="title">Nossa Vitrine</h2>
+					<h2 class="title">Mais Vendidos</h2>
 				</div>
 			</div>
 			<!-- /section title -->
