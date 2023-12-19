@@ -2222,6 +2222,7 @@ textarea.input {
 
 .footer-links li {
   color: #B9BABC;
+  text-transform: uppercase;
 }
 
 .footer-links li a {
