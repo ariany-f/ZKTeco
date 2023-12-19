@@ -681,6 +681,8 @@ textarea.input {
 
 .main-nav>li>a {
   padding: 20px 0px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .backdrop.dropdown.megamenu {
