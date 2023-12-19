@@ -237,9 +237,9 @@
 					<ul class="tab-nav">
 						<li class="active"><a data-toggle="tab" href="#tab1">Descrição</a></li>
 						<li><a data-toggle="tab" href="#tab2">Detalhes</a></li>
-						@if($product->ratings_active)
+						<!-- @if($product->ratings_active)
 						<li><a data-toggle="tab" href="#tab3">Avaliações({{ $product->ratings->where('visible', true)->count() }})</a></li>
-						@endif
+						@endif -->
 					</ul>
 					<!-- /product tab nav -->
 
