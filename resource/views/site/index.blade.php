@@ -98,6 +98,43 @@
 <!-- /SECTION -->
 @endif
 
+
+@if($products_showcase->count())
+<!-- SECTION -->
+<div class="section" style="margin-top: 40px;">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+
+			<!-- section title -->
+			<div class="col-md-12">
+				<div class="section-title">
+					<h2 class="title">Mais Vendidos</h2>
+				</div>
+			</div>
+			<!-- /section title -->
+
+			<!-- Products tab & slick -->
+			<div class="col-md-12">
+				<div class="row">
+					<div class="products-slick" data-nav="#slick-nav-2">
+						@foreach($products_showcase as $product)
+						@include('includes.site.products.card')
+						@endforeach
+					</div>
+					<div id="slick-nav-2" class="products-slick-nav"></div>
+				</div>
+			</div>
+			<!-- Products tab & slick -->
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /SECTION -->
+@endif
+
 @if($products->count())
 <!-- SECTION -->
 <div class="section">
@@ -145,42 +182,6 @@
 		</div>
 	</div>
 </div> -->
-
-@if($products_showcase->count())
-<!-- SECTION -->
-<div class="section" style="margin-top: 40px;">
-	<!-- container -->
-	<div class="container">
-		<!-- row -->
-		<div class="row">
-
-			<!-- section title -->
-			<div class="col-md-12">
-				<div class="section-title">
-					<h2 class="title">Mais Vendidos</h2>
-				</div>
-			</div>
-			<!-- /section title -->
-
-			<!-- Products tab & slick -->
-			<div class="col-md-12">
-				<div class="row">
-					<div class="products-slick" data-nav="#slick-nav-2">
-						@foreach($products_showcase as $product)
-						@include('includes.site.products.card')
-						@endforeach
-					</div>
-					<div id="slick-nav-2" class="products-slick-nav"></div>
-				</div>
-			</div>
-			<!-- Products tab & slick -->
-		</div>
-		<!-- /row -->
-	</div>
-	<!-- /container -->
-</div>
-<!-- /SECTION -->
-@endif
 
 @if($notices->count())
 <!-- SECTION -->
