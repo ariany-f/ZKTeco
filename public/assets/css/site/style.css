@@ -132,7 +132,7 @@ ol {
   height: 40px;
   padding: 0px 15px;
   border: 1px solid #E4E7ED;
-  background-color: #FFF;
+  background-color: #f5f5f5;
   width: 100%;
 }
 
@@ -438,8 +438,8 @@ textarea.input {
 \*----------------------------*/
 
 #top-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #1E1F29;
 }
 
@@ -455,6 +455,7 @@ textarea.input {
 
 .header-links li a {
   color: #FFF;
+  font-weight: 300;
 }
 
 .header-links li a:hover {

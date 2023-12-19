@@ -129,7 +129,7 @@
                     <li><a href="mailto:{{ $email }}" title="Entrar em Contato por E-Mail"><i class="fa fa-envelope-o"></i> {{ $email }}</a></li>
                     @endif
                     
-                    <li><a href="javascript:void(0)" title="Visite nossa loja nesse endereço"><i class="fa fa-map-marker"></i> {{ mask(config('app.address.postal_code'), '#####-###') }} - {{ config('app.address.street') }}, {{ config('app.address.number') }}, {{ config('app.address.district') }}, {{ config('app.address.city') }} - {{ config('app.address.state') }}</a></li>
+                    <li><a href="javascript:void(0)" title="Visite nossa loja nesse endereço"><i class="fa fa-map-marker"></i>{{ config('app.address.city') }} - {{ config('app.address.state') }}</a></li>
                 </ul>
                 <ul class="header-links pull-right">
                     @if(!auth('site'))
