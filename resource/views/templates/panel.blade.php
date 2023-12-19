@@ -17,7 +17,7 @@
 	<section class="modal-load">
         <main>
             <div class="load"></div>
-            <p><strong class="message">Aguarde, Carregando...</strong></p>
+            <p><strong class="message">CARREGANDO...</strong></p>
         </main>
     </section>
 
