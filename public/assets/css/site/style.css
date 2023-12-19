@@ -1053,7 +1053,7 @@ textarea.input {
 }
 
 .product .product-body .product-rating>i.fa-star {
-  color: #ef233c;
+  color: #163f83;
 }
 
 .product .product-body .product-rating:after {
@@ -1153,7 +1153,7 @@ textarea.input {
   border: 2px solid transparent;
   height: 40px;
   padding: 0 30px;
-  background-color: #ef233c;
+  background-color: #163f83;
   color: #FFF;
   text-transform: uppercase;
   font-weight: 700;
