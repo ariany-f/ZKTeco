@@ -299,7 +299,7 @@
                 </div>
                 <!-- <p class="by"><a href="http://www.thunderbold.com.br" target="blank">Desenvolvido por Thunderbold</a></p> -->
             </div>
-            <div class="col-lg-2 col-lg-push-1 col-md-2 col-md-push-1 col-sm-3 col-xs-12">
+            <div class="col-lg-3 col-lg-push-1 col-md-3 col-md-push-1 col-sm-4 col-xs-12">
                 <div class="footer">
                     <h3 class="footer-title">Contato</h3>
                     <ul class="footer-links">
