@@ -6,7 +6,7 @@
 @endphp
 
 <!-- product -->
-<div class="col-md-4 col-xs-6" style="min-height: 500px;">
+<div class="col-md-4 col-xs-6" style="min-height: 350px;">
 	<div class="product">
 		<div class="product-img">
 			<a href="{{ route('site.products.show', ['slug' => $product->slug]) }}" title="{{ $product->name }}">
