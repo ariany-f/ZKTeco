@@ -72,7 +72,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #2B2D42;
+  color: #162b77;
   font-weight: 700;
   margin: 0 0 10px;
 }
@@ -438,15 +438,39 @@ textarea.input {
 \*----------------------------*/
 
 #top-header {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: #1E1F29;
+  justify-content: center;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.44);
 }
 
 .header-links li {
   display: inline-block;
   margin-right: 15px;
   font-size: 12px;
+  padding: 25px;
+}
+
+.header-links.pull-right {
+  display: flex;
+  font-weight: 700;
+}
+
+.header-links.pull-right li a {
+  font-weight: 700;
+}
+
+.header-links.pull-right li{
+  color: white;
+  margin-right: 0;
+}
+
+.header-links.pull-right li{
+  background-color: #1265ba;
+}
+.header-links.pull-right li:nth-child(n+2){
+  background-color: #133f8d;
 }
 
 .header-links li:last-child {
@@ -745,6 +769,13 @@ textarea.input {
 
 .header-ctn li.nav-toggle {
   display: none;
+}
+
+#responsive-nav {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 /*----------------------------*\
@@ -1071,19 +1102,27 @@ textarea.input {
 
 .product .product-body .product-btns>button {
   position: relative;
-  width: 40px;
+  width: 220px;
   height: 40px;
+  border-radius: 25px;
   line-height: 40px;
-  background: transparent;
+  background: #163f83;
   border: none;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 
+.product .product-body .product-btns>button>a {
+  color: white;
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .product .product-body .product-btns>button:hover {
-  background-color: #E4E7ED;
-  color: #163f83;
-  border-radius: 50%;
+  background-color: #00e4ff;
+  border-radius: 25px;
 }
 
 .product .product-body .product-btns>button .tooltipp {
@@ -2347,6 +2386,12 @@ textarea.input {
 /*=========================================================
 	13 -> RESPONSIVE
 ===========================================================*/
+
+@media only screen and (min-width: 1340px) {
+  .container {
+    width: 1340px;
+  }
+}
 
 @media only screen and (max-width: 1201px) {}
 
