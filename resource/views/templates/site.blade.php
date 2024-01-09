@@ -221,7 +221,10 @@
                     @foreach($categories as $category)
                         @if(count($category->subcategories))
                             <li class="nav-item backdrop dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" title="Categoria">{{ $category->name }}</a>
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" title="Categoria">
+                                    <img src="storage/app/public/{{ $category->image }}" style="width: 40px;">
+                                    {{ $category->name }}
+                                </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <div class="dropdown-container">
                                         @foreach($category->subcategories as $subcategory)
