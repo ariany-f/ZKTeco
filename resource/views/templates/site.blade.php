@@ -222,7 +222,7 @@
                         @if(count($category->subcategories))
                             <li class="nav-item backdrop dropdown">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" title="Categoria">
-                                    <img src="storage/app/public/{{ $category->image }}" style="width: 40px;">
+                                    <img src="/storage/app/public/{{ $category->image }}" style="width: 40px;">
                                     {{ $category->name }}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
