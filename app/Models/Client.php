@@ -90,13 +90,13 @@ class Client extends Model{
 		}
 
 		return $query
+					->Where($where)
 					->orWhere('name', 'LIKE', "%{$filter}%")
 					->orWhere('email', 'LIKE', "%{$filter}%")
 					->orWhere('telephone', 'LIKE', "%{$filter}%")
 					->orWhere('cell', 'LIKE', "%{$filter}%")
 					->orWhere('cpf', 'LIKE', "%{$filter}%")
 					->orWhere('cnpj', 'LIKE', "%{$filter}%")
-					->andWhere($where)
 					->orderBy('id', 'DESC')
 					->offset($page)
 		
