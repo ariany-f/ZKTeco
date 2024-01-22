@@ -9,7 +9,7 @@
                 <p class="m-0 p-0">{{ $message }}</p>
             </div>
             <form action="{{ $action ?? null }}" method="POST" class="modal-footer modal-form-delete">
-                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_method" value="PUT">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                 <button type="submit" class="btn btn-danger">{{ $btnmsg }}</button>
             </form>
