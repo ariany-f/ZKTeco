@@ -37,7 +37,7 @@ class PendingController extends Controller{
 		$this->client->verifyPermission('edit.pending');
 		$client = $this->client->findOrFail($id);
 
-        $data['pending'] = '0';
+        $data['pending'] = false;
 		if($client->update($data)){
             echo '<pre>';
             print_r($client);die;
