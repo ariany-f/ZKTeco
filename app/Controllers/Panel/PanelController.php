@@ -89,7 +89,8 @@ class PanelController extends Controller{
 			[
 				'users',
 				'pages', 
-				'clients', 
+				'clients',
+				'pending',
 				'products', 
 				'ratings', 
 				'requests', 
