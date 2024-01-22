@@ -32,20 +32,17 @@ class PendingController extends Controller{
 		return view('panel.pending.index', compact('clients', 'pages', 'builder'));
 	}
 
-	public function show($id){
+	public function approve($id){
+		$this->client->verifyPermission('edit.pending');
 		$client = $this->client->findOrFail($id);
 
-		return view('panel.clients.show', compact('client'));
-	}
-
-	public function destroy($id){
-		$this->client->verifyPermission('delete.clients');
-		$client = $this->client->findOrFail($id);
-
-		if($client->delete()){
-			redirect(route('panel.clients'), ['success' => 'Cliente deletado com sucesso']);
+        $request = new Request();
+		$data = $request->all();
+        $data['pending'] = 0;
+		if($client->update($data)){
+			redirect(route('panel.pending'), ['success' => 'Cliente aprovado com sucesso']);
 		}
 
-		redirect(route('panel.clients'), ['error' => 'Cliente NÃO deletado, Ocorreu um erro no processo de exclusão!']);
+		redirect(route('panel.pending'), ['error' => 'Cliente NÃO aprovado, Ocorreu um erro no processo de atualização!']);
 	}
 }

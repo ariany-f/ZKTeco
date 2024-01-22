@@ -10,6 +10,13 @@
 		'btnmsg' => 'Deletar',
 	])
 @endif
+@if(can('edit.pending'))
+	@include('includes.components.modais.approve', [
+		'title' => 'Aprovar Cadastro',
+		'message' => 'Deseja realmente aprovar este cliente?',
+		'btnmsg' => 'Aprovar',
+	])
+@endif
 
 <div class="container-main">
 	@include('includes.messages')
@@ -44,6 +51,10 @@
 						@if(can('view.pending'))
 							<a href="{{ route('panel.clients.show', ['id' => $client->id]) }}" class="btn btn-sm btn-warning" title="Mais Informações"><i class="fas fa-info-circle"></i></a>
 						@endif
+
+                        @if(can('edit.pending'))
+                            <a href="javascript:void(0)" class="btn btn-sm btn-danger btn-warning" data-route="{{ route('panel.pending.approve', ['id' => $client->id]) }}" data-bs-toggle="modal" data-bs-target="#modalApprove" title="Aprovar Cliente"><i class="fas fa-trash"></i></a>
+                        @endif
 
 						@if(can('delete.clients'))
 							<a href="javascript:void(0)" class="btn btn-sm btn-danger btn-delete" data-route="{{ route('panel.clients.destroy', ['id' => $client->id]) }}" data-bs-toggle="modal" data-bs-target="#modalDelete" title="Deletar Cliente"><i class="fas fa-trash"></i></a>

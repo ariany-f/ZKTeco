@@ -98,8 +98,9 @@ Route::group(['prefix' => 'painel', 'middleware' => [Expiration::class, Authenti
 
 		// ROUTE PENDING
 		Route::group(['prefix' => 'pendente'], function(){
-			Route::any('/', [PendingController::class, 'index'])->name('panel.pending');
+			Route::any('/{id}', [PendingController::class, 'index'])->name('panel.pending');
 			Route::get('/{id}', [ClientController::class, 'show'])->name('panel.clients.show');
+			Route::put('/{id}', [PendingController::class, 'approve'])->name('panel.pending.approve');
 			Route::delete('/{id}', [ClientController::class, 'destroy'])->name('panel.clients.destroy');
 		});
 
