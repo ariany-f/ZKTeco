@@ -27,7 +27,7 @@ use Illuminate\Database\Capsule\Manager as DB;
 
 class PanelController extends Controller{
 	public function index(){
-		// $this->generatePermissions();
+		$this->generatePermissions();
 
 		$data = [
 			'usersCount' 		=> User::count(),
@@ -39,6 +39,7 @@ class PanelController extends Controller{
 			'couponsCount' 		=> Coupon::count(),
 			'slideshowCount' 	=> SlideShow::count(),
 			'bannersCount' 		=> Banner::count(),
+			'pendingCount' 		=> Client::count(),
 			'galleriesCount'	=> Galery::count(),
 			'partnersCount'		=> Partner::count(),
 			'depoimentsCount'	=> Depoiment::count(),

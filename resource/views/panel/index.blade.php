@@ -15,7 +15,7 @@
 		</div>
 	</div>
 
-	@if(can('view.clients') || can('view.categories') || can('view.slideshow') || can('view.banners') || can('view.depoiments'))
+	@if(can('view.clients') || can('view.categories') || can('view.slideshow') || can('view.banners') || can('view.depoiments') || can('view.pending'))
 	<div class="card mb-4">
 		<div class="card-header p-3"><strong>Site</strong></div>
 		<div class="card-body">
@@ -26,6 +26,10 @@
 
 				@if(can('view.clients'))
 					@include('includes.components.card', ['title' => 'Clientes', 'link' => route('panel.clients'), 'class' => 'text-warning', 'amount' => $clientsCount, 'icon' => 'fas fa-user-circle'])
+				@endif
+	
+				@if(can('view.pending'))
+					@include('includes.components.card', ['title' => 'Pending Clients', 'link' => route('panel.pending'), 'class' => 'text-secondary', 'amount' => $pendingCount, 'icon' => 'fas fa-user'])
 				@endif
 	
 				@if(can('view.categories'))

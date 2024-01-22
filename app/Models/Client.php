@@ -76,9 +76,18 @@ class Client extends Model{
 		return date('d/m/Y H:i:s', strtotime($this->updated_at));
 	}
 
-	public function scopeSearch($query, $page = 1, $filter = '', $limit = null){
+	public function scopeSearch($query, $page = 1, $filter = '', $limit = null, $pending = 0){
 		$limit = $limit ?? config('paginate.limit');
 		$page = ($page - 1) * $limit;
+
+		if($pending)
+		{
+			$where = ['pending', '=', $pending];
+		}
+		else
+		{
+			$where = ['1', '=', '1'];
+		}
 
 		return $query
 					->orWhere('name', 'LIKE', "%{$filter}%")
@@ -87,11 +96,21 @@ class Client extends Model{
 					->orWhere('cell', 'LIKE', "%{$filter}%")
 					->orWhere('cpf', 'LIKE', "%{$filter}%")
 					->orWhere('cnpj', 'LIKE', "%{$filter}%")
+					->andWhere($where)
 					->orderBy('id', 'DESC')
 					->offset($page)
 		
 		
 					->limit($limit);
+	}
+    
+	public function checkPendingAccount(){
+		// Verifica se a conta desse Client já foi aprovada
+		$Client = $this;
+
+		if($this->pending){
+			redirect(route('site.login'), ['error' => 'Esta conta não está aprovada! Aguarde aprovação dos administradores'], true);
+		}
 	}
 
 	public function checkValidateAccount(){

@@ -44,6 +44,7 @@ class AuthController extends Controller{
 
 		$this->socialValidate($client);
 		$client->checkValidateAccount();
+		$client->checkPendingAccount();
 
 		session(config('app.url'), ['client' => $client]);
 		redirect(route('site.myaccount'));
@@ -124,6 +125,7 @@ class AuthController extends Controller{
 
 			$this->socialValidate($client);
 			$client->checkValidateAccount();
+			$client->checkPendingAccount();
 
 			redirect(route('site.account.' . $redirect . '.create'), ['success' => 'Sua conta foi criada com sucesso, enviamos um link de validação para seu e-mail, Verifique seu e-mail e sua caixa de spam!']);
 		}
@@ -240,6 +242,7 @@ class AuthController extends Controller{
 		// Login by id
 		if($client){
 			$client->checkValidateAccount();
+			$client->checkPendingAccount();
 
 			session()->remove('facebook_auth');
 
@@ -251,6 +254,7 @@ class AuthController extends Controller{
 		$client = Client::where('email', $facebook_user->getEmail())->first();
 		if($client){
 			$client->checkValidateAccount();
+			$client->checkPendingAccount();
 
 			redirect(route('site.login'), ['success' => "Olá {$facebook_user->getFirstName()}, faça login para conectar seu facebook!"]);
 		}
@@ -301,6 +305,7 @@ class AuthController extends Controller{
 		// Login by id
 		if($client){
 			$client->checkValidateAccount();
+			$client->checkPendingAccount();
 
 			session()->remove('google_auth');
 
@@ -312,6 +317,7 @@ class AuthController extends Controller{
 		$client = Client::where('email', $google_user->getEmail())->first();
 		if($client){
 			$client->checkValidateAccount();
+			$client->checkPendingAccount();
 
 			redirect(route('site.login'), ['success' => "Olá {$google_user->getFirstName()}, faça login para conectar sua conta google!"]);
 		}
