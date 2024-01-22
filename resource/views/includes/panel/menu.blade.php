@@ -24,6 +24,12 @@
 			<a href="javascript:void(0)"><li class="disabled"><i class="fas fa-users"></i> Clientes</li></a>
 		@endif
 
+		@if(can('view.pending'))
+			<a href="{{ route('panel.pending') }}" title="Clientes Pendentes"><li><i class="fas fa-user-circle"></i> Clientes Pendentes</li></a>
+		@else
+			<a href="javascript:void(0)"><li class="disabled"><i class="fas fa-users"></i> Clientes Pendentes</li></a>
+		@endif
+
 		@if(can('view.categories'))
 			<a href="{{ route('panel.categories') }}" title="Página de Categorias"><li><i class="fas fa-tag"></i> Categorias</li></a>
 		@else

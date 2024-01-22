@@ -1,6 +1,6 @@
 @extends('templates.panel')
 
-@section('title', 'Pending Clients')
+@section('title', 'Clientes Pendentes')
 
 @section('container')
 @if(can('delete.clients'))
