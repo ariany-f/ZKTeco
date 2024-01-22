@@ -92,15 +92,18 @@ class Client extends Model{
 			$sign = '=';
 			$compare = '1';
 		}
+		
 
 		return $query
-					->Where($field, $sign, $compare)
-					->orWhere('name', 'LIKE', "%{$filter}%")
-					->orWhere('email', 'LIKE', "%{$filter}%")
-					->orWhere('telephone', 'LIKE', "%{$filter}%")
-					->orWhere('cell', 'LIKE', "%{$filter}%")
-					->orWhere('cpf', 'LIKE', "%{$filter}%")
-					->orWhere('cnpj', 'LIKE', "%{$filter}%")
+					->where($field, $sign, $compare)
+					->where(function($query) {
+						$query->orWhere('name', 'LIKE', "%{$filter}%")
+						->orWhere('email', 'LIKE', "%{$filter}%")
+						->orWhere('telephone', 'LIKE', "%{$filter}%")
+						->orWhere('cell', 'LIKE', "%{$filter}%")
+						->orWhere('cpf', 'LIKE', "%{$filter}%")
+						->orWhere('cnpj', 'LIKE', "%{$filter}%");
+					})
 					->orderBy('id', 'DESC')
 					->offset($page)
 		
