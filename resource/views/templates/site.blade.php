@@ -150,7 +150,7 @@
                 <!-- row -->
                 <div class="row">
                     <!-- LOGO -->
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <div class="header-logo">
                             <a href="{{ url() }}" class="logo" title="{{ config('app.name') }}">
                                 <img src="{{ public_path('assets/img/logo.png') }}" alt="{{ config('app.name') }}" title="{{ config('app.name') }}">
@@ -160,7 +160,7 @@
                     <!-- /LOGO -->
 
                     <!-- SEARCH BAR -->
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <div class="header-search">
                             <form action="{{ route('site.products') }}" method="POST">
                                 <select class="input-select select-url">
