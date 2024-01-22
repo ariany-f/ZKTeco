@@ -93,6 +93,14 @@ Route::group(['prefix' => 'painel', 'middleware' => [Expiration::class, Authenti
 			Route::get('/{id}', [ClientController::class, 'show'])->name('panel.clients.show');
 			Route::delete('/{id}', [ClientController::class, 'destroy'])->name('panel.clients.destroy');
 		});
+		
+
+		// ROUTE PENDING
+		Route::group(['prefix' => 'pendente'], function(){
+			Route::any('/', [ClientController::class, 'index'])->name('panel.pending');
+			Route::get('/{id}', [ClientController::class, 'show'])->name('panel.clients.show');
+			Route::delete('/{id}', [ClientController::class, 'destroy'])->name('panel.clients.destroy');
+		});
 
 		// ROUTE CATEGORIES
 		Route::group(['prefix' => 'categorias'], function(){
