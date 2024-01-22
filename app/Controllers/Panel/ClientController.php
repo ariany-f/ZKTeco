@@ -24,9 +24,9 @@ class ClientController extends Controller{
 		$builder = $request->except('page');
 		$page = $request->input('page') ?? 1;
 		$search = $request->input('search');
-		$pending = false;
+		$pending = 0;
 		$pages = ceil($this->client->search(1, $search, $this->client->count(), $pending)->count() / config('paginate.limit'));
-
+		print_r($this->client->search($page, $search, null, $pending));die;
 		$clients = $this->client->search($page, $search, null, $pending)->get();
 
 		return view('panel.clients.index', compact('clients', 'pages', 'builder'));
