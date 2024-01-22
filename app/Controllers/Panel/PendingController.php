@@ -33,6 +33,7 @@ class PendingController extends Controller{
 	}
 
 	public function approve($id){
+        print_r($id);die;
 		$this->client->verifyPermission('edit.pending');
 		$client = $this->client->findOrFail($id);
 
