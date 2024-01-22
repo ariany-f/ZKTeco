@@ -82,15 +82,19 @@ class Client extends Model{
 
 		if($pending)
 		{
-			$where = ['pending', '=', $pending];
+			$field = 'pending';
+			$sign = '=';
+			$compare = $pending;
 		}
 		else
 		{
-			$where = ['1', '=', '1'];
+			$field = '1';
+			$sign = '=';
+			$compare = '1';
 		}
 
 		return $query
-					->Where($where)
+					->Where($field, $sign, $compare)
 					->orWhere('name', 'LIKE', "%{$filter}%")
 					->orWhere('email', 'LIKE', "%{$filter}%")
 					->orWhere('telephone', 'LIKE', "%{$filter}%")
