@@ -255,7 +255,7 @@ class Mail{
         self::setHeader();
         self::setMessage();
 
-        dd(self::$message);
+      //  dd(self::$message);
 
         return mail(self::$to, self::$subject, self::$message, self::$header);
     }
