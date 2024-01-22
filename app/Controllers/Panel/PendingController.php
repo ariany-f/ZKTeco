@@ -9,7 +9,7 @@ use App\Models\{
 	Client
 };
 
-class ClientController extends Controller{
+class PendingController extends Controller{
 	private $client;
 
 	public function __construct(){
