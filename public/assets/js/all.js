@@ -45,6 +45,15 @@ $(document).ready(function(){
             $('.modal-form-delete').attr('action', route)
         }
     })
+    
+
+    $('.btn-approve').click(function(){
+        let route = $(this).data('route')
+        
+        if(route != undefined){
+            $('.modal-form-approve').attr('action', route)
+        }
+    })
 
     // Tooltip
     // $('[title]').tooltip({

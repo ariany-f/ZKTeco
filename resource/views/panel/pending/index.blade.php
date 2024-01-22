@@ -53,7 +53,7 @@
 						@endif
 
                         @if(can('edit.pending'))
-                            <a href="javascript:void(0)" class="btn btn-sm btn-danger btn-warning" data-route="{{ route('panel.pending.approve', ['id' => $client->id]) }}" data-bs-toggle="modal" data-bs-target="#modalApprove" title="Aprovar Cliente"><i class="fas fa-trash"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-success btn-approve" data-route="{{ route('panel.pending.approve', ['id' => $client->id]) }}" data-bs-toggle="modal" data-bs-target="#modalApprove" title="Aprovar Cliente"><i class="fas fa-check"></i></a>
                         @endif
 
 						@if(can('delete.clients'))
