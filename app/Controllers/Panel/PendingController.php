@@ -20,7 +20,7 @@ class PendingController extends Controller{
 
 	public function index(){
 		$request = new Request();
-
+        print_r('teste');die;
 		$builder = $request->except('page');
 		$page = $request->input('page') ?? 1;
 		$search = $request->input('search');
