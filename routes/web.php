@@ -7,6 +7,7 @@ use App\Controllers\Panel\{
 	UserController,
 	PageController,
 	ClientController,
+	PendingController,
 	ProductController,
 	RatingController,
 	RequestController,
@@ -41,6 +42,7 @@ use App\Controllers\Site\{
 use App\Controllers\Site\MyAccount\{
 	MyAccountController,
 	ClientController as ClientControllerSite,
+	PendingController as PendingControllerSite,
 	RequestController as RequestControllerSite,
 	PagSeguroController,
 	MercadoPagoController,
