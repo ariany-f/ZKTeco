@@ -37,9 +37,8 @@ class PendingController extends Controller{
 		$this->client->verifyPermission('edit.pending');
 		$client = $this->client->findOrFail($id);
 
-        $data['id'] = $client->id;
-        $data['pending'] = false;
-		if($client->update($data)){
+        $client->pending = 0;
+		if($client->update()){
             echo '<pre>';
             print_r($client);die;
 			redirect(route('panel.pending'), ['success' => 'Cliente aprovado com sucesso']);
