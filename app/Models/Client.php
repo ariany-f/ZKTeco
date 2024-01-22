@@ -100,6 +100,14 @@ class Client extends Model{
 		$Client = $this;
 
 		if($this->pending){
+			
+			Mail::isHtml(true)
+					->charset(config('mail.charset'))
+					->addFrom(config('mail.to'), config('app.name'))
+					->subject('Foi solicitado um cadastro para verificar preços TechScan Distribuidora' . config('app.name'))
+					->message(view('mail.account.validate', compact('client')))
+					->send('ariany_f@hotmail.com', 'TechScan');
+					
 			redirect(route('site.login'), ['error' => 'Esta conta não está aprovada! Aguarde aprovação dos administradores'], true);
 		}
 	}

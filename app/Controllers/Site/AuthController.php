@@ -127,7 +127,7 @@ class AuthController extends Controller{
 			$client->checkValidateAccount();
 			$client->checkPendingAccount();
 
-			redirect(route('site.account.' . $redirect . '.create'), ['success' => 'Sua conta foi criada com sucesso, enviamos um link de validação para seu e-mail, Verifique seu e-mail e sua caixa de spam!']);
+			redirect(route('site.account.' . $redirect . '.create'), ['success' => 'Sua conta foi solicitada com sucesso, enviamos um link de validação para seu e-mail, Verifique seu e-mail e sua caixa de spam!']);
 		}
 
 		redirect(route('site.account.' . $redirect . '.create'), ['error' => 'Não foi possível criar sua conta em nosso site, Ocorreu um erro no processo de cadastro!'], true);
