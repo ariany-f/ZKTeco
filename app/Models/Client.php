@@ -80,43 +80,19 @@ class Client extends Model{
 		$limit = $limit ?? config('paginate.limit');
 		$page = ($page - 1) * $limit;
 
-		if($pending)
-		{
-			return $query
-					->where('pending', '=',  '1')
-					->where(function($query) {
-						$query->orWhere('name', 'LIKE', "%{$filter}%")
-						->orWhere('email', 'LIKE', "%{$filter}%")
-						->orWhere('telephone', 'LIKE', "%{$filter}%")
-						->orWhere('cell', 'LIKE', "%{$filter}%")
-						->orWhere('cpf', 'LIKE', "%{$filter}%")
-						->orWhere('cnpj', 'LIKE', "%{$filter}%");
-					})
-					->orderBy('id', 'DESC')
-					->offset($page)
-		
-		
-					->limit($limit);
-		}
-		else
-		{
-			
-			return $query
-					->orWhere('name', 'LIKE', "%{$filter}%")
+		return $query
+				->where('pending', '=',  $pending)
+				->where(function($query) {
+					$query->orWhere('name', 'LIKE', "%{$filter}%")
 					->orWhere('email', 'LIKE', "%{$filter}%")
 					->orWhere('telephone', 'LIKE', "%{$filter}%")
 					->orWhere('cell', 'LIKE', "%{$filter}%")
 					->orWhere('cpf', 'LIKE', "%{$filter}%")
-					->orWhere('cnpj', 'LIKE', "%{$filter}%")
-					->orderBy('id', 'DESC')
-					->offset($page)
-		
-		
-					->limit($limit);
-		}
-		
-
-		
+					->orWhere('cnpj', 'LIKE', "%{$filter}%");
+				})
+				->orderBy('id', 'DESC')
+				->offset($page)		
+				->limit($limit);
 	}
     
 	public function checkPendingAccount(){
