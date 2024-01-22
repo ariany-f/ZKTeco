@@ -82,20 +82,8 @@ class Client extends Model{
 
 		if($pending)
 		{
-			$field = 'pending';
-			$sign = '=';
-			$compare = $pending;
-		}
-		else
-		{
-			$field = '1';
-			$sign = '=';
-			$compare = '1';
-		}
-		
-
-		return $query
-					->where($field, $sign, $compare)
+			return $query
+					->where('pending', '=',  '1')
 					->where(function($query) {
 						$query->orWhere('name', 'LIKE', "%{$filter}%")
 						->orWhere('email', 'LIKE', "%{$filter}%")
@@ -109,6 +97,26 @@ class Client extends Model{
 		
 		
 					->limit($limit);
+		}
+		else
+		{
+			
+			return $query
+					->orWhere('name', 'LIKE', "%{$filter}%")
+					->orWhere('email', 'LIKE', "%{$filter}%")
+					->orWhere('telephone', 'LIKE', "%{$filter}%")
+					->orWhere('cell', 'LIKE', "%{$filter}%")
+					->orWhere('cpf', 'LIKE', "%{$filter}%")
+					->orWhere('cnpj', 'LIKE', "%{$filter}%")
+					->orderBy('id', 'DESC')
+					->offset($page)
+		
+		
+					->limit($limit);
+		}
+		
+
+		
 	}
     
 	public function checkPendingAccount(){
