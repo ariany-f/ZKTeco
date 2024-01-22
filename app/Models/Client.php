@@ -122,7 +122,6 @@ class Client extends Model{
 
 	public function verifyPermission(string $permission){
 		if(!can($permission)){
-			print_r('dsak');die;
 			abort(404);
 		}
 	}
