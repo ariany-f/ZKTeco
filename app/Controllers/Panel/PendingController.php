@@ -39,6 +39,8 @@ class PendingController extends Controller{
 
         $data['pending'] = 0;
 		if($client->update($data)){
+            echo '<pre>';
+            print_r($client);die;
 			redirect(route('panel.pending'), ['success' => 'Cliente aprovado com sucesso']);
 		}
 
