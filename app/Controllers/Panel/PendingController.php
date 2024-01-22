@@ -14,7 +14,7 @@ class PendingController extends Controller{
 
 	public function __construct(){
 		$this->client = new Client();
-
+        print_r('ouro teste');die;
 		$this->client->verifyPermission('view.pending');
 	}
 
