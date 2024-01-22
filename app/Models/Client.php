@@ -81,7 +81,7 @@ class Client extends Model{
 		$page = ($page - 1) * $limit;
 
 		return $query
-				->where('pending', '=',  $pending)
+				->where('pending', $pending)
 				->where(function($query) {
 					$query->orWhere('name', 'LIKE', "%{$filter}%")
 					->orWhere('email', 'LIKE', "%{$filter}%")
