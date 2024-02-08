@@ -150,7 +150,7 @@
                 <!-- row -->
                 <div class="row">
                     <!-- LOGO -->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="header-logo">
                             <a href="{{ url() }}" class="logo" title="{{ config('app.name') }}">
                                 <img src="{{ public_path('assets/img/logo.png') }}" alt="{{ config('app.name') }}" title="{{ config('app.name') }}">
@@ -181,7 +181,7 @@
                         </div>
                     </div> -->
                     <!-- /SEARCH BAR -->
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <ul class="header-links pull-right">
                             @if(!auth('site'))
                             <li><a href="{{ route('site.login') }}" title="Fazer Login em Minha Conta">Login</a></li>

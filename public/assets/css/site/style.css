@@ -2397,6 +2397,17 @@ textarea.input {
   }
 }
 
+@media only screen and (min-width: 1201px) {
+  .clearfix {
+    display: none;
+  }
+  #header .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 @media only screen and (max-width: 1201px) {}
 
 @media only screen and (max-width: 991px) {
