@@ -183,8 +183,11 @@
                     <!-- /SEARCH BAR -->
                     <div class="col-md-9">
                         <ul class="header-links pull-right">
-                            <li class="icon"><i class="fa fa-search search-btn"></i></li>
-                            <li class="search-list-item"><input type="text" class="input" placeholder="Buscar" name="search" value="{{ $search ?? null }}"></li>
+                                <li class="icon"><i class="fa fa-search search-btn"></i></li>
+                                
+                            
+                                <li class="search-list-item"><form action="{{ route('site.products') }}" method="POST"><input type="text" class="input" placeholder="Buscar" name="search" value="{{ $search ?? null }}">                            </form></li>
+
                             @if(!auth('site'))
                             <li><a href="{{ route('site.login') }}" title="Fazer Login em Minha Conta">Login</a></li>
                             <li><a href="{{ route('site.account.pj.create') }}" title="Criar Minha Conta">Criar Conta</a></li>

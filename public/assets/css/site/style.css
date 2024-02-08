@@ -477,6 +477,9 @@ textarea.input {
   padding: 0px;
   width: 0;
 }
+.header-links.pull-right li.search-list-item form{
+  height: 100%;
+}
 .header-links.pull-right li:nth-child(n+3){
   background-color: #133f8d;
 }
