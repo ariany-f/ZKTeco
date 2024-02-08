@@ -29,7 +29,7 @@ $(document).ready(function(){
     $('li.icon').click(function(e){
         
         if($('.search-list-item').css('width') === '0px'){
-            $('.search-list-item').animate({width: '100%'}, 500 )
+            $('.search-list-item').animate({width: 300}, 500 )
         }
         else {
             $('.search-list-item').animate({width: 0}, 500 )
