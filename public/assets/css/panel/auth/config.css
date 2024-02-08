@@ -12,7 +12,7 @@
 	justify-content: center;
 	background-size: cover;
 	flex-direction: column;
-	background-color: #e62942;
+	background-color: #1e1f29;
 }
 .content .alert{
 	width: 500px;
@@ -27,7 +27,7 @@
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
-	box-shadow: 0px 10px 20px #c7001b;
+	box-shadow: 0px 10px 20px #000000;
 
 }
 .content form img{
@@ -55,7 +55,7 @@
 .content form button{
 	padding: 15px;
 	border: none;
-	background-color: #e62942;
+	background-color: #1e1f29;
 	color: white;
 	border-radius: 50px;
 }

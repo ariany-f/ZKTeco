@@ -118,7 +118,7 @@
     <!-- HEADER -->
     <header>
         <!-- TOP HEADER -->
-        <div id="top-header">
+        <!-- <div id="top-header">
             <div class="container">
                 <ul class="header-links pull-left">
                     @if(!empty($phone))
@@ -140,7 +140,7 @@
                     @endif
                 </ul>
             </div>
-        </div>
+        </div> -->
         <!-- /TOP HEADER -->
 
         <!-- MAIN HEADER -->
@@ -160,7 +160,7 @@
                     <!-- /LOGO -->
 
                     <!-- SEARCH BAR -->
-                    <div class="col-md-8">
+                    <!-- <div class="col-md-8">
                         <div class="header-search">
                             <form action="{{ route('site.products') }}" method="POST">
                                 <select class="input-select select-url">
@@ -179,8 +179,18 @@
                                 <button class="search-btn"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- /SEARCH BAR -->
+                    <div class="col-md-8">
+                        <ul class="header-links pull-right">
+                            @if(!auth('site'))
+                            <li><a href="{{ route('site.login') }}" title="Fazer Login em Minha Conta">Login</a></li>
+                            <li><a href="{{ route('site.account.pj.create') }}" title="Criar Minha Conta">Criar Conta</a></li>
+                            @else
+                            <li><a href="{{ route('site.myaccount') }}" title="Minha Conta"><i class="fa fa-user-circle"></i> Minha Conta</a></li>
+                            @endif
+                        </ul>
+                    </div>
 
                     <!-- ACCOUNT -->
                     <div class="col-md-1 clearfix">
