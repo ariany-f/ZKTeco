@@ -26,6 +26,16 @@ $(document).ready(function(){
     //     }
     // })
 
+    $('li.icon').click(function(e){
+        
+        if($('.search-list-item').css('width') === '0px'){
+            $('.search-list-item').animate({width: '100%'}, 500 )
+        }
+        else {
+            $('.search-list-item').animate({width: 0}, 500 )
+        };
+    })
+
     // LGPD
     $('.lgpd-close').click(function(e){
         e.preventDefault()
