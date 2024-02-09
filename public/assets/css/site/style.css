@@ -2315,6 +2315,7 @@ textarea.input {
 .footer-links li a {
   color: #FFFFFF;
   font-weight: 300;
+  transition: all 0.1s ease;
 }
 
 .footer-links li i {
@@ -2326,7 +2327,7 @@ textarea.input {
 
 .footer-links li a:hover {
   color: #1265ba;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .copyright {
