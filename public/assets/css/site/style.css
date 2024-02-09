@@ -806,12 +806,12 @@ textarea.input {
 
 .nav-item:not(.open):has(~ .nav-item.open)
 {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .nav-item.open ~ .nav-item:not(.open)
 {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 /*----------------------------*\
