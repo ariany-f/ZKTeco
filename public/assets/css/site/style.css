@@ -1045,11 +1045,12 @@ textarea.input {
   transition: .5s ease;
   justify-content: center;
   background-color: #0000008a;
-  align-items: center;
+  align-items: end;
 }
 
 .product .overlay .text {
-  color: #FFF;
+  color: #d0d0d0;
+  font-size: 25px;
 }
 
 .product:hover .overlay {

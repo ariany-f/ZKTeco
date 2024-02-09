@@ -49,13 +49,13 @@
 					@endfor
 				@endif
 			</div> -->
-			<div class="product-btns">
+			<!-- <div class="product-btns"> -->
 				<!-- <button class="add-to-wishlist add-favorite-btn-ajax" data-url="{{ route('site.myaccount.favorites.add', ['id' => $product->id]) }}"><i class="fa fa-heart-o"></i><span class="tooltipp">Favoritar</span></button> -->
-				<button class="quick-view"><a href="{{ route('site.products.show', ['slug' => $product->slug]) }}" title="Visualizar">Visualizar<span class="tooltipp">Visualizar</span></a></button>
-			</div>
+				<!-- <button class="quick-view"><a href="{{ route('site.products.show', ['slug' => $product->slug]) }}" title="Visualizar">Visualizar<span class="tooltipp">Visualizar</span></a></button> -->
+			<!-- </div> -->
 		</div>
 		<div class="overlay">
-			<div class="text">VISUALIZAR</div>
+			<a href="{{ route('site.products.show', ['slug' => $product->slug]) }}" title="Visualizar"><div class="text">VISUALIZAR</div></a>
 		</div>
 		<!-- <div class="add-to-cart">
 			@if($product->sizes->where('quantity', '>', 0)->count())
