@@ -1389,15 +1389,16 @@ textarea.input {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
   display: inline-block !important;
   margin: 0px 2px;
 }
 
 .products-slick-nav .slick-prev:before,
 .products-slick-nav .slick-next:before {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /*=========================================================
