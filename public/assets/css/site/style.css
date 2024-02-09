@@ -2308,12 +2308,12 @@ textarea.input {
 }
 
 .footer-links li {
-  color: #B9BABC;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 
 .footer-links li a {
-  color: #B9BABC;
+  color: #FFFFFF;
 }
 
 .footer-links li i {
@@ -2324,7 +2324,7 @@ textarea.input {
 }
 
 .footer-links li a:hover {
-  color: #163f83;
+  color: #B9BABC;
 }
 
 .copyright {
