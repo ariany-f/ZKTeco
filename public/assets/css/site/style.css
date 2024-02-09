@@ -770,7 +770,7 @@ textarea.input {
   margin-right: 10px;
 }
 
-.main-nav>li>a:hover,
+/* .main-nav>li>a:hover,
 .main-nav>li>a:focus,
 .main-nav>li.active>a {
   color: #163f83;
@@ -785,7 +785,7 @@ textarea.input {
   background-color: #163f83;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
-}
+} */
 
 .main-nav>li>a:hover:after,
 .main-nav>li>a:focus:after,
@@ -802,6 +802,11 @@ textarea.input {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.nav-item
+{
+  transition: all 0.5s linear;
 }
 
 .nav-item:not(.open):has(~ .nav-item.open)
