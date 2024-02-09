@@ -1050,7 +1050,7 @@ textarea.input {
 
 .product .product-img .product-label>span {
   border: 2px solid;
-  padding: 2px 10px;
+  padding: 4px 12px;
   font-size: 12px;
 }
 
@@ -1061,9 +1061,10 @@ textarea.input {
 }
 
 .product .product-img .product-label>span.new {
-  background-color: #163f83;
-  border-color: #163f83;
+  background-color: #1265ba;
+  border-color: #1265ba;
   color: #FFF;
+  border-radius: 10px;
 }
 
 .product .product-body {
