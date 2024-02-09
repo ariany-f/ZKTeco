@@ -806,7 +806,7 @@ textarea.input {
 
 .nav-item.open ~ .nav-item:not(.open)
 {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 /*----------------------------*\
