@@ -2326,6 +2326,7 @@ textarea.input {
 
 .footer-links li a:hover {
   color: #1265ba;
+  font-weight: 700;
 }
 
 .copyright {
