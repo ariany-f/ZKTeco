@@ -24,7 +24,7 @@
 		</div>
 		<div class="product-body">
 			<h3 class="product-name"><a href="{{ route('site.products.show', ['slug' => $product->slug]) }}" title="{{ $product->name }}">{{ $product->name }}</a></h3>
-			
+			<h3 class="product-name"><a href="{{ route('site.products.show', ['slug' => $product->slug]) }}" title="{{ $product->description }}">{{ $product->description }}</a></h3>
 			@if($client)
 			<h4 class="product-price">
 				R$ {{ $product->priceFormat }}
