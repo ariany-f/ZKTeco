@@ -810,7 +810,7 @@ textarea.input {
 }
 
 .nav-item {
-  transition: all .3s ease-in;
+  transition: all .4s ease-in;
 }
 
 .nav-item:not(.open):has(~ .nav-item.open)
