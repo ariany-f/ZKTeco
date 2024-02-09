@@ -472,6 +472,10 @@ textarea.input {
   margin-right: 0;
 }
 
+.header-links.pull-right li:hover{
+  opacity: 0.8;
+}
+
 .header-links.pull-right li{
   background-color: #1265ba;
 }
@@ -505,7 +509,7 @@ textarea.input {
 }
 
 .header-links li a:hover {
-  color: #2a87c0;
+  font-weight: 500;
 }
 
 .header-links li i {
