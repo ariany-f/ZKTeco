@@ -1032,8 +1032,9 @@ textarea.input {
 }
 
 .product:hover {
-  -webkit-box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #8c9db8;
-  box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #8c9db8;
+  /* -webkit-box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #8c9db8;
+  box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #8c9db8; */
+  background-color: #f0f8ff2e;
 }
 
 .product .product-img {
