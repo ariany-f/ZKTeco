@@ -36,12 +36,6 @@ $(document).ready(function(){
         };
     })
 
-    $('li.icon').on('hover', function(e){
-        if($('.search-list-item').css('width') === '0px'){
-            $('.search-list-item').animate({width: 20}, 500 ).animate({width: 0}, 500 )
-        }
-    })
-
     // LGPD
     $('.lgpd-close').click(function(e){
         e.preventDefault()
