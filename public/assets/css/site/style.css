@@ -2469,6 +2469,9 @@ textarea.input {
   .container {
     width: 1340px;
   }
+  .container.login {
+    width: 1070px;
+  }
 }
 
 @media only screen and (min-width: 1201px) {

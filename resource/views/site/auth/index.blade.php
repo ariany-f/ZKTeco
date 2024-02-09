@@ -5,13 +5,13 @@
 @section('description', 'Faça login  em sua conta')
 
 @section('container')
-<section class="container">
+<section class="container login">
 	<div class="row">
 		<div class="col-md-12">
 			<form action="{{ route('site.login.validate') }}" method="POST" class="form">
 				@include('includes.messages')
 
-				<h2>Faça seu login:</h2><hr />
+				<h2 class="title">Faça seu login:</h2><hr />
 
 				@include('includes.components.form.input', [
 					'title' => 'E-Mail',

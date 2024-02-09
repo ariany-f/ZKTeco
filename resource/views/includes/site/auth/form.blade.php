@@ -4,7 +4,7 @@
 	@if($type == 1)
 	<h2>Criar Conta como pessoa física:</h2>
 	@else
-	<h2>Solicitar Cadastro</h2>
+	<h2 class="title">Solicitar Cadastro</h2>
 	@endif
 	<hr />
 
