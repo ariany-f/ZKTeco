@@ -193,6 +193,7 @@
                             <li><a href="{{ route('site.account.pj.create') }}" title="Criar Minha Conta">Criar Conta</a></li>
                             @else
                             <li><a href="{{ route('site.myaccount') }}" title="Minha Conta">Minha Conta</a></li>
+                            <li><a href="{{ route('site.myaccount.logout') }}" title="Sair">Sair</a></li>
                             @endif
                         </ul>
                     </div>

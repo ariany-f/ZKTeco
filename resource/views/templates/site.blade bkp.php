@@ -136,7 +136,8 @@
                     <li><a href="{{ route('site.login') }}" title="Fazer Login em Minha Conta">Login</a></li>
                     <li><a href="{{ route('site.account.pj.create') }}" title="Criar Minha Conta">Criar Conta</a></li>
                     @else
-                    <li><a href="{{ route('site.myaccount') }}" title="Minha Conta"><i class="fa fa-user-circle"></i> Minha Conta</a></li>
+                    <li><a href="{{ route('site.myaccount') }}" title="Minha Conta">Minha Conta</a></li>
+                    <li><a href="{{ route('site.myaccount.logout') }}" title="Sair">Sair</a></li>
                     @endif
                 </ul>
             </div>
