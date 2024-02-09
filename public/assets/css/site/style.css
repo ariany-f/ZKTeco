@@ -333,8 +333,8 @@ textarea.input {
 
 .section-title .title {
   display: inline-block;
-  text-transform: uppercase;
   margin: 0px;
+  font-weight: 500;
 }
 
 .section-title .section-nav {
