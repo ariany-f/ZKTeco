@@ -1031,10 +1031,31 @@ textarea.input {
   transition: 0.2s all;
 }
 
-.product:hover {
+
+.product .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  justify-content: center;
+  background-color: #0000008a;
+  align-items: center;
+}
+
+.product .overlay .text {
+  color: #FFF;
+}
+
+.product:hover .overlay {
   /* -webkit-box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #8c9db8;
   box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #8c9db8; */
-  background-color: #f0f8ff2e;
+  opacity: 1;
 }
 
 .product .product-img {

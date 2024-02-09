@@ -54,6 +54,9 @@
 				<button class="quick-view"><a href="{{ route('site.products.show', ['slug' => $product->slug]) }}" title="Visualizar">Visualizar<span class="tooltipp">Visualizar</span></a></button>
 			</div>
 		</div>
+		<div class="overlay">
+			<div class="text">VISUALIZAR</div>
+		</div>
 		<!-- <div class="add-to-cart">
 			@if($product->sizes->where('quantity', '>', 0)->count())
 			<button class="add-to-cart-btn add-to-cart-btn-ajax" data-url="{{ route('site.cart.add', ['product_id' => $product->id]) }}"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
