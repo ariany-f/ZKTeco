@@ -1147,9 +1147,9 @@ textarea.input {
   position: relative;
   width: 220px;
   height: 40px;
-  border-radius: 25px;
+  border-radius: 5px;
   line-height: 40px;
-  background: #163f83;
+  background: #1265ba;
   border: none;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
@@ -1159,13 +1159,13 @@ textarea.input {
   color: white;
   transition: 0.2s all;
   -webkit-transition: 0.2s all;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
 .product .product-body .product-btns>button:hover {
-  background-color: #00e4ff;
-  border-radius: 25px;
+  background-color: #133f8d;
+  border-radius: 2px;
 }
 
 .product .product-body .product-btns>button .tooltipp {
