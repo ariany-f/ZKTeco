@@ -809,9 +809,8 @@ textarea.input {
   display: flex;
 }
 
-.nav-item
-{
-  transition: all 0.1s linear;
+.nav-item {
+  transition: all .3s ease-in;
 }
 
 .nav-item:not(.open):has(~ .nav-item.open)
