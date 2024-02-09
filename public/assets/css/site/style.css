@@ -806,17 +806,17 @@ textarea.input {
 
 .nav-item
 {
-  transition: all 0.5s linear;
+  transition: all 0.1s linear;
 }
 
 .nav-item:not(.open):has(~ .nav-item.open)
 {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .nav-item.open ~ .nav-item:not(.open)
 {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 /*----------------------------*\
