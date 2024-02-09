@@ -2309,11 +2309,11 @@ textarea.input {
 
 .footer-links li {
   color: #FFFFFF;
-  text-transform: uppercase;
 }
 
 .footer-links li a {
   color: #FFFFFF;
+  font-weight: 300;
 }
 
 .footer-links li i {
