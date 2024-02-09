@@ -1024,7 +1024,7 @@ textarea.input {
 .product {
   position: relative;
   margin: 15px 0px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: aliceblue;
   /* -webkit-box-shadow: 0px 0px 0px 0px #E4E7ED, 0px 0px 0px 1px #E4E7ED;
   box-shadow: 0px 0px 0px 0px #E4E7ED, 0px 0px 0px 1px #E4E7ED; */
@@ -1048,7 +1048,7 @@ textarea.input {
   background-color: #00000086;
   align-items: end;
   padding-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .product .overlay .text {
