@@ -335,6 +335,7 @@ textarea.input {
   display: inline-block;
   margin: 0px;
   font-weight: 500;
+  color: grey;
 }
 
 .section-title .section-nav {
