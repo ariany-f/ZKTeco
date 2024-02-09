@@ -1044,13 +1044,15 @@ textarea.input {
   opacity: 0;
   transition: .5s ease;
   justify-content: center;
-  background-color: #0000008a;
+  background-color: #000000c2;
   align-items: end;
+  padding-bottom: 10px;
 }
 
 .product .overlay .text {
-  color: #d0d0d0;
+  color: #e6e4e4;
   font-size: 25px;
+  z-index: 999;
 }
 
 .product:hover .overlay {
