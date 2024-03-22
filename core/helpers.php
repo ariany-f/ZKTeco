@@ -77,7 +77,7 @@ if(!function_exists('url')){
 		}else{
 			$url = trim(config('app.url'), '/');
 		}
-
+		
 		$route = trim($route, '/');
 
 		return str_ireplace("\\", '/', $url . '/' . $route);
