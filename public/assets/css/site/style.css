@@ -857,10 +857,26 @@ textarea.input {
     width: 100%;
   }
 
-  .main-nav {
+  #responsive-nav.active {
+    background: white;
+  }
+
+  #responsive-nav.active a{
+    color: #162b77;
+  }
+
+  #fechar-menu-mobile {
+    display: block !important;
+  }
+
+  .navbar-collapse {
+    border: none;
+  }
+
+  /* .main-nav {
     margin: 0px;
     float: none;
-  }
+  } */
 
   .main-nav>li {
     display: block;
@@ -1786,7 +1802,7 @@ textarea.input {
   border: 2px solid transparent;
   height: 40px;
   padding: 0 30px;
-  background-color: #ef233c;
+  background-color: #163f83;
   color: #FFF;
   text-transform: uppercase;
   font-weight: 700;

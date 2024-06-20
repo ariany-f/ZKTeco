@@ -9,6 +9,12 @@
 	$('.menu-toggle > a').on('click', function (e) {
 		e.preventDefault();
 		$('#responsive-nav').toggleClass('active');
+		$('.navbar-collapse').toggleClass('collapse');
+	})
+
+	$('#fechar-menu-mobile').on('click', function() {
+		$('#responsive-nav').toggleClass('active');
+		$('.navbar-collapse').toggleClass('collapse');
 	})
 
 	// Fix cart dropdown from closing

@@ -194,6 +194,7 @@
 					</div>
 					@endif
 					
+					@if($client)
 					<form action="{{ route('site.cart.store', ['product_id' => $product->id, 'size_id' => $product->sizes->first()->id]) }}" method="POST" class="add-to-cart" @if($product->sizes->first()->quantity == 0) style="display: none" @endif>
 						<div class="qty-label">
 							Qtde
@@ -203,9 +204,9 @@
 								<span class="qty-down">-</span>
 							</div>
 						</div>
-						<button type="submit" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+						<button type="submit" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao Orçamento</button>
 					</form>
-
+					@endif
 					<!-- <ul class="product-btns">
 						<li><a href="{{ route('site.myaccount.favorites.add', ['id' => $product->id]) }}" title="Adicionar aos Favoritos" class="add-favorite-btn-ajax" data-url="{{ route('site.myaccount.favorites.add', ['id' => $product->id]) }}"><i class="fa fa-heart-o"></i> Favoritar</a></li>
 					</ul> -->

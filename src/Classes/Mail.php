@@ -1,5 +1,8 @@
 <?php
 namespace Src\Classes;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 
 use Src\Classes\Storage\File;
 
@@ -250,12 +253,43 @@ class Mail{
      * @return bool
      */
     public static function send(string $to, string $name) : bool{
+    
+        $mail = new PHPMailer(true);
+
         self::$to = $to;
         self::$name = $name;
         self::setHeader();
         self::setMessage();
 
-      //  dd(self::$message);
+        try {
+            //Server settings
+            $mail->SMTPDebug = true;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->CharSet = "UTF-8";
+            $mail->Host       = 'mail.uniebco.com.br';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'uniebco@uniebco.com.br';                     //SMTP username
+            $mail->Password   = 'uni@ebco123';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        
+            //Recipients
+            $mail->setFrom('uniebco@uniebco.com.br', 'TechScan');
+            $mail->addAddress($to);     //Add a recipient
+        
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = self::$subject;
+            $mail->Body    = self::$message;
+          //  $mail->AltBody = self::$header;
+        
+            $mail->send();
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+
+       // dd(self::$message);
 
         return mail(self::$to, self::$subject, self::$message, self::$header);
     }

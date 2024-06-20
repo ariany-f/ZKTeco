@@ -85,7 +85,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{ public_path('assets/dist/site.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ public_path('assets/dist/site.css?ver=6') }}">
     @yield('styles')
 </head>
 <body>
@@ -228,7 +228,9 @@
         <!-- container -->
         <div class="container">
             <!-- responsive-nav -->
-            <div id="responsive-nav">
+            <div id="responsive-nav" style="display: flex;flex-direction: column;justify-content: start;">
+                
+                <i class="fa fa-close" id="fechar-menu-mobile" style="display: none;font-size: 2rem;"></i>
                 <!-- NAV -->
                 <ul class="collapse navbar-collapse main-nav nav navbar-nav">
                     <!-- <li class="active"><a href="{{ route('site') }}" title="Página Inicial">Início</a></li> -->
@@ -393,7 +395,7 @@
     @endif
 
     <!-- ##### All Javascript Script ##### -->
-    <script type="text/javascript" src="{{ public_path('assets/dist/site.js') }}"></script>
+    <script type="text/javascript" src="{{ public_path('assets/dist/site.js?ver=6') }}"></script>
     @yield('scripts')
 </body>
 </html>

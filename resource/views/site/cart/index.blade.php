@@ -2,12 +2,12 @@
 
 @section('title', 'Carrinho')
 @section('url', route('site.cart'))
-@section('description', 'Aqui está o seu carrinho de compras')
+@section('description', 'Aqui está o seu orçamento')
 
 @section('container')
 @include('includes.site.modais.delete', [
-    'title' => 'Remover do Carrinho',
-    'message' => 'Deseja realmente remover este produto do carrinho?',
+    'title' => 'Remover do Orçamento',
+    'message' => 'Deseja realmente remover este produto do orçamento?',
     'btnmsg' => 'Remover'
 ])
 
@@ -18,7 +18,7 @@
 	<div class="row">
 		<div class="col-md-8">
 			<div class="shopping-cart">
-				<div class="title">Carrinho</div>
+				<div class="title">Orçamento</div>
 				
 				@foreach($products as $product)
 					@if($product->product->visible)
@@ -27,8 +27,8 @@
 							<input type="hidden" name="id" value="{{ $product->size->id }}">
 							
 							<div class="buttons">
-								<button type="submit" class="btn btn-sm btn-primary" title="Atualizar Produto do Carrinho"><i class="fa fa-repeat"></i></button>
-								<a href="javascript:void(0)" class="btn btn-sm btn-danger btn-delete ml-2" data-route="{{ route('site.cart.destroy', ['id' => $product->size->id]) }}" data-toggle="modal" data-target="#modalDelete" title="Remover do Carrinho"><i class="fa fa-trash"></i></a>
+								<button type="submit" class="btn btn-sm btn-primary" title="Atualizar Produto do Orçamento"><i class="fa fa-repeat"></i></button>
+								<a href="javascript:void(0)" class="btn btn-sm btn-danger btn-delete ml-2" data-route="{{ route('site.cart.destroy', ['id' => $product->size->id]) }}" data-toggle="modal" data-target="#modalDelete" title="Remover do Orçamento"><i class="fa fa-trash"></i></a>
 							</div>
 						
 							<div class="image">
@@ -79,11 +79,11 @@
 		</div>
 		<div class="col-md-4">
 			<div class="card">
-				<div class="card-header p-3"><strong>Resumo do Carrinho</strong></div>
+				<div class="card-header p-3"><strong>Resumo do Orçamento</strong></div>
 				<div class="card-body" style="padding: 20px;">
 					<div>
-						<p><strong>TOTAL DO CARRINHO: </strong> R$ {{ number_format($cart->amount(), 2, ',', '.') }}</p>
-						<p><strong>DESCONTO DO CARRINHO: </strong> R$ {{ number_format($cart->amount() * (config('store.cart.discount_percent_promotion') / 100), 2, ',', '.') }}</p>
+						<p><strong>TOTAL DOS ITENS: </strong> R$ {{ number_format($cart->amount(), 2, ',', '.') }}</p>
+						<!-- <p><strong>DESCONTO DO ORÇAMENTO: </strong> R$ {{ number_format($cart->amount() * (config('store.cart.discount_percent_promotion') / 100), 2, ',', '.') }}</p> -->
 						<p><strong>TOTAL: </strong> R$ {{ number_format($cart->amount() - ($cart->amount() * config('store.cart.discount_percent_promotion') / 100), 2, ',', '.') }}</p>
 					</div>
 
@@ -94,13 +94,13 @@
 						<input type="hidden" name="freight">
 						<input type="hidden" name="code">
 			
-						<a href="{{ route('site.cart.clear') }}" class="primary-btn cta-btn" title="Limpar carrinho de compras" style="width: 100%;">LIMPAR CARRINHO</a>
-						<button type="submit" class="primary-btn cta-btn" title="Finalizar carrinho e efetuar o pedido" form="form-request" style="width: 100%; margin-top: 10px;">FINALIZAR PEDIDO R$ {{ number_format($cart->amount() - ($cart->amount() * config('store.cart.discount_percent_promotion') / 100), 2, ',', '.') }}</button>
+						<a href="{{ route('site.cart.clear') }}" class="primary-btn cta-btn" title="Limpar Orçamento" style="width: 100%;">LIMPAR ORÇAMENTO</a>
+						<button type="submit" class="primary-btn cta-btn" title="Solicitar Contato" form="form-request" style="width: 100%; margin-top: 10px;">FINALIZAR SOLICITAÇÃO R$ {{ number_format($cart->amount() - ($cart->amount() * config('store.cart.discount_percent_promotion') / 100), 2, ',', '.') }}</button>
 					</form>
 				</div>
 			</div>
 
-			<div class="row" style="margin-top: 40px;">
+			<!-- <div class="row" style="margin-top: 40px;">
 				<div class="col-md-12">
 					<div class="input-container" style="margin-bottom: 10px;">
 						<form action="{{ route('site.cart.freight') }}" method="POST" id="form-freight" data-container=".result-frete">
@@ -127,11 +127,11 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
     @else
-    <p>SEU CARRINHO ESTÁ VÁZIO</p>
+    <p>NÃO HÁ ITENS NESSE ORÇAMENTO</p>
     @endif
 </section>
 @endsection

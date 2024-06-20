@@ -11,10 +11,10 @@
             <h1>Seja bem vindo(a) {{ $client->name }}</h1><hr/>
 
             <div class="cards">
-                @include('includes.components.card', ['title' => 'Pedidos', 'link' => route('site.myaccount.requests'), 'class' => 'text-primary', 'amount' => $client->requests->count(), 'icon' => 'fa fa-list'])
-                @include('includes.components.card', ['title' => 'Carrinho de Compras', 'link' => route('site.cart'), 'class' => 'text-warning', 'amount' => $cart->quantity(), 'icon' => 'fa fa-shopping-cart'])
-                @include('includes.components.card', ['title' => 'Endereços', 'link' => route('site.myaccount.adresses'), 'class' => 'text-info', 'amount' => $client->adresses->count(), 'icon' => 'fa fa-map-marker'])
-                @include('includes.components.card', ['title' => 'Favoritos', 'link' => route('site.myaccount.favorites'), 'class' => 'text-danger', 'amount' => $client->favorites->count(), 'icon' => 'fa fa-heart'])
+                <!-- @include('includes.components.card', ['title' => 'Pedidos', 'link' => route('site.myaccount.requests'), 'class' => 'text-primary', 'amount' => $client->requests->count(), 'icon' => 'fa fa-list']) -->
+                <!-- @include('includes.components.card', ['title' => 'Orçamento em Andamento', 'link' => route('site.cart'), 'class' => 'text-warning', 'amount' => $cart->quantity(), 'icon' => 'fa fa-shopping-cart']) -->
+                <!-- @include('includes.components.card', ['title' => 'Endereços', 'link' => route('site.myaccount.adresses'), 'class' => 'text-info', 'amount' => $client->adresses->count(), 'icon' => 'fa fa-map-marker']) -->
+                <!-- @include('includes.components.card', ['title' => 'Favoritos', 'link' => route('site.myaccount.favorites'), 'class' => 'text-danger', 'amount' => $client->favorites->count(), 'icon' => 'fa fa-heart']) -->
             </div>
         </div>
     </div>

@@ -154,7 +154,8 @@ class AuthController extends Controller{
 			redirect(route('site.forget'), ['error' => 'Informe o e-mail vinculado a sua conta, Para dar início ao processo de recuperação!'], true);
 		}
 
-		$client = $this->client->where('email', $request->input('email'))->where('validated', true)->first();
+		$client = $this->client->where('email', $request->input('email'))->first();
+		//$client = $this->client->where('email', $request->input('email'))->where('validated', true)->first();
 		
 		if(!$client){
 			redirect(route('site.forget'), ['error' => 'Não existe nenhuma conta vinculada ao e-mail informado ou a conta informda ainda não foi validada!'], true);

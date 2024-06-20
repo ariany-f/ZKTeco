@@ -349,7 +349,7 @@ class ProductController extends Controller{
 
 							if($size){
 								$size->update([
-									'description' 		=> trim($descriptions[$j]),
+									'description' 		=> trim($descriptions[$j]) ?? 'Único',
 									'price' 			=> number($prices[$j]),
 									'price_previous' 	=> number($pricesPrevious[$j]),
 									'quantity'			=> number($quanties[$j]),
@@ -360,7 +360,7 @@ class ProductController extends Controller{
 								]);
 							}else{
 								$size = $color->sizes()->create([
-									'description' 		=> trim($descriptions[$j]),
+									'description' 		=> trim($descriptions[$j]) ?? 'Único',
 									'price' 			=> number($prices[$j]),
 									'price_previous' 	=> number($pricesPrevious[$j]),
 									'quantity'			=> number($quanties[$j]),

@@ -106,7 +106,7 @@ class Client extends Model{
 					->addFrom(config('mail.to'), config('app.name'))
 					->subject('Foi solicitado um cadastro para verificar preços TechScan Distribuidora' . config('app.name'))
 					->message(view('mail.account.pending'))
-					->send('ariany_f@hotmail.com', 'TechScan');
+					->send(config('mail.to'), 'TechScan');
 
 			redirect(route('site.login'), ['error' => 'Esta conta não está aprovada! Aguarde aprovação dos administradores'], true);
 		}

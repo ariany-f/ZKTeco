@@ -18,8 +18,7 @@
 				'name' => isset($id) ? "description-size-{$id}[]" : 'description-size[]', 
 				'title' => 'Descrição do Tamanho',
 				'value' => $description ?? null,
-				'class' => 'required',
-				'required' => true
+				'class' => ''
 			])
 
 			<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script> 
@@ -67,8 +66,7 @@
 						'name' => isset($id) ? "width-size-{$id}[]" : 'width-size[]', 
 						'title' => 'Largura(centímetros)',
 						'value' => $width ?? null,
-						'class' => 'required float-mask',
-						'required' => true
+						'class' => 'float-mask'
 					])
 				</div>
 				<div class="col-md-4">
@@ -77,8 +75,7 @@
 						'name' => isset($id) ? "height-size-{$id}[]" : 'height-size[]', 
 						'title' => 'Altura(centímetros)',
 						'value' => $height ?? null,
-						'class' => 'required float-mask',
-						'required' => true
+						'class' => 'float-mask'
 					])
 				</div>
 				<div class="col-md-4">
@@ -87,8 +84,7 @@
 						'name' => isset($id) ? "depth-size-{$id}[]" : 'depth-size[]', 
 						'title' => 'Comprimento(centímetros)',
 						'value' => $depth ?? null,
-						'class' => 'required float-mask',
-						'required' => true
+						'class' => 'float-mask'
 					])
 				</div>
 			</div>
@@ -98,8 +94,7 @@
 				'name' => isset($id) ? "weight-size-{$id}[]" : 'weight-size[]', 
 				'title' => 'Peso(quilogramas)',
 				'value' => $weight ?? null,
-				'class' => 'required float-mask',
-				'required' => true
+				'class' => 'float-mask'
 			])
 		</div>
 	</div>

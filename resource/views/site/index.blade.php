@@ -134,12 +134,13 @@
 </div>
 <!-- /SECTION -->
 @endif
-
 @if($products->count())
 <!-- SECTION -->
 <div class="section">
 	<!-- container -->
 	<div class="container">
+	
+		@include('includes.messages')
 		<!-- row -->
 		<div class="row">
 
