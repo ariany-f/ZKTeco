@@ -93,7 +93,7 @@
 				<div id="product-main-img">
 					@foreach($product->colors->first()->images as $image)
 					<div class="product-preview">
-						<img src="{{ url('storage/app/public/' . $image->source) }}" alt="{{ $product->name }}" title="{{ $product->name }}">
+						<img style="height: 500px; width: auto;margin: 0 auto;" src="{{ url('storage/app/public/' . $image->source) }}" alt="{{ $product->name }}" title="{{ $product->name }}">
 					</div>
 					@endforeach
 				</div>
@@ -114,7 +114,7 @@
 				<div id="product-imgs">
 					@foreach($product->colors->first()->images as $image)
 					<div class="product-preview">
-						<img src="{{ url('storage/app/public/' . $image->source) }}" alt="{{ $product->name }}" title="{{ $product->name }}">
+						<img style="height: 150px; width: auto;margin: 0 auto;" src="{{ url('storage/app/public/' . $image->source) }}" alt="{{ $product->name }}" title="{{ $product->name }}">
 					</div>
 					@endforeach
 				</div>
