@@ -97,9 +97,9 @@ class Client extends Model{
     
 	public function checkPendingAccount(){
 		// Verifica se a conta desse Client já foi aprovada
-		$Client = $this;
+		$client = $this;
 
-		if($this->pending){
+		//if($client->pending){
 			
 			Mail::isHtml(true)
 					->charset(config('mail.charset'))
@@ -107,9 +107,7 @@ class Client extends Model{
 					->subject('Foi solicitado um cadastro para verificar preços TechScan Distribuidora' . config('app.name'))
 					->message(view('mail.account.pending'))
 					->send(config('mail.to'), 'TechScan');
-
-			redirect(route('site.login'), ['error' => 'Esta conta não está aprovada! Aguarde aprovação dos administradores'], true);
-		}
+		//}
 	}
 
 	public function checkValidateAccount(){
@@ -120,7 +118,7 @@ class Client extends Model{
 			Mail::isHtml(true)
 					->charset(config('mail.charset'))
 					->addFrom(config('mail.to'), config('app.name'))
-					->subject('Parabéns por criar sua conta em nosso site, agora basta validá-la!: ' . config('app.name'))
+					->subject(config('app.name') . ' - Parabéns por criar sua conta em nosso site, agora basta validá-la!')
 					->message(view('mail.account.validate', compact('client')))
 					->send($this->email, $this->name);
 

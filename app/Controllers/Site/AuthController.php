@@ -43,8 +43,8 @@ class AuthController extends Controller{
 		}
 
 		$this->socialValidate($client);
-		$client->checkValidateAccount();
 		$client->checkPendingAccount();
+		$client->checkValidateAccount();
 
 		session(config('app.url'), ['client' => $client]);
 		redirect(route('site.myaccount'));
@@ -124,8 +124,8 @@ class AuthController extends Controller{
 			$client->save();
 
 			$this->socialValidate($client);
-			$client->checkValidateAccount();
 			$client->checkPendingAccount();
+			$client->checkValidateAccount();
 
 			redirect(route('site.account.' . $redirect . '.create'), ['success' => 'Sua conta foi solicitada com sucesso, enviamos um link de validação para seu e-mail, Verifique seu e-mail e sua caixa de spam!']);
 		}
@@ -164,7 +164,7 @@ class AuthController extends Controller{
 		$client->token = md5(sha1(password_hash(json_encode($client), PASSWORD_DEFAULT)));
 		$client->save();
 
-		Mail::isHtml(true)
+		$send_mail = Mail::isHtml(true)
 				->charset(config('mail.charset'))
 				->addFrom(config('mail.to'), config('app.name'))
 				->subject('Recuperação de senha: ' . config('app.name'))
@@ -242,8 +242,8 @@ class AuthController extends Controller{
 
 		// Login by id
 		if($client){
-			$client->checkValidateAccount();
 			$client->checkPendingAccount();
+			$client->checkValidateAccount();
 
 			session()->remove('facebook_auth');
 
@@ -254,8 +254,8 @@ class AuthController extends Controller{
 		// Login by email
 		$client = Client::where('email', $facebook_user->getEmail())->first();
 		if($client){
-			$client->checkValidateAccount();
 			$client->checkPendingAccount();
+			$client->checkValidateAccount();
 
 			redirect(route('site.login'), ['success' => "Olá {$facebook_user->getFirstName()}, faça login para conectar seu facebook!"]);
 		}
@@ -305,8 +305,8 @@ class AuthController extends Controller{
 
 		// Login by id
 		if($client){
-			$client->checkValidateAccount();
 			$client->checkPendingAccount();
+			$client->checkValidateAccount();
 
 			session()->remove('google_auth');
 
@@ -317,8 +317,8 @@ class AuthController extends Controller{
 		// Login by email
 		$client = Client::where('email', $google_user->getEmail())->first();
 		if($client){
-			$client->checkValidateAccount();
 			$client->checkPendingAccount();
+			$client->checkValidateAccount();
 
 			redirect(route('site.login'), ['success' => "Olá {$google_user->getFirstName()}, faça login para conectar sua conta google!"]);
 		}

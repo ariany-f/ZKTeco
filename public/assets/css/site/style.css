@@ -1695,6 +1695,11 @@ textarea.input {
   border: 1px solid #E4E7ED;
 }
 
+.product-preview {
+  display: flex!important;
+  justify-content: center;
+}
+
 #product-imgs .product-preview.slick-current {
   border-color: #163f83;
 }

@@ -80,7 +80,8 @@
 				'name' => 'password',
 				'type' => 'password',
 				'class' => 'required',
-				'required' => true
+				'required' => true,
+				'min' => 8
 			])
 		</div>
 	</div>

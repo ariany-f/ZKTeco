@@ -85,7 +85,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{ public_path('assets/dist/site.css?ver=6') }}">
+    <link rel="stylesheet" type="text/css" href="{{ public_path('assets/dist/site.css?ver=7') }}">
     @yield('styles')
 </head>
 <body>

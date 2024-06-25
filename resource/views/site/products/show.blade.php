@@ -167,7 +167,7 @@
 						<p><strong class="price-discount">R$ {{ number_format($product->sizes->first()->getPriceDiscount(1), 2, ',', '.') }}</strong> <small>à vista com {{ $product->getDiscount(1) }}% de desconto</small></p>
 						@endif
 
-						<p><small>Em até {{ $product->installment_no_interest }} vezes sem juros</small></p>
+						<!-- <p><small>Em até {{ $product->installment_no_interest }} vezes sem juros</small></p> -->
 					</div>
 					@endif
 					
